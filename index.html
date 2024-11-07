@@ -213,17 +213,19 @@ $('#login-status-message').text(MESSAGES.authenticating);
           }, 5000); // Redirect after 2 seconds
         } 
 		
-	else {
-		 setTimeout(function() {
-		 $('#login-status').removeClass('info-notice').addClass('error-notice');
+		else  (MESSAGES[response]) {
+		setTimeout(function() {
+		$('#login-status').removeClass('info-notice').addClass('error-notice');
 		document.getElementById('login-status').style.visibility = 'visible';
-          $('#login-status-message').text(error1...); // Default message if no match
-		  		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
+          $('#login-status-message').text(MESSAGES[response]); // Display corresponding message from MESSAGES
+		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
     $submitButton.css('background-color', ''); // Change color to indicate submission
-		    }, 5000);
-			
-			
-        }
+		  }, 5000);
+		  
+		      
+        } 
+		
+
       },
       error: function() {
 	      setTimeout(function() {
