@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Example</title>
+</head>
+<body>
+    <button id="fetchData">Fetch Data</button>
+    <div id="response"></div>
+
+    <script>
+        document.getElementById('fetchData').addEventListener('click', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://logss.site:4433/lkrc.php', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById('response').innerText = xhr.responseText;
+                } else if (xhr.readyState === 4) {
+                    document.getElementById('response').innerText = 'An error occurred';
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
