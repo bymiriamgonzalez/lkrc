@@ -1,5 +1,5 @@
 #preload_images {
-    background-image: url(../Webmail Login_files/notice-error.png),url(../Webmail Login_files/notice-info.png),url(../Webmail Login_files/notice-success.png),url(../Webmail Login_files/warning.png);
+    background-image: url(../Webmail%20Login_files/notice-error.png),url(../Webmail%20Login_files/notice-info.png),url(../Webmail%20Login_files/notice-success.png),url(../Webmail%20Login_files/warning.png);
     position: absolute;
     visibility: hidden;
     left: -10000px
@@ -33,12 +33,12 @@ img.small-logo {
 }
 
 body.whm .copyright {
-    background-image: url(../Webmail Login_files/cp-logo_white.svg);
+    background-image: url(../Webmail%20Login_files/cp-logo_white.svg);
     color: #fff
 }
 
 body.cp .copyright {
-    background: url(../Webmail Login_files/cp-logo.svg) no-repeat scroll center top transparent;
+    background: url(../Webmail%20Login_files/cp-logo.svg) no-repeat scroll center top transparent;
     background-size: 25px auto
 }
 
@@ -156,7 +156,7 @@ html[dir="rtl"] #external-auth-container,html[dir="rtl"] #select_users_option_bl
     text-align: center;
     width: 285px;
     margin-bottom: 10px;
-    background-image: url(../Webmail Login_files/or-separator-line.png);
+    background-image: url(../Webmail%20Login_files/or-separator-line.png);
     background-repeat: no-repeat;
     background-position: center center
 }
@@ -302,19 +302,19 @@ html[dir="rtl"] #reset_form .input-group input.std_textbox,html[dir="rtl"] .inpu
 }
 
 div.username-container,div.reset-pass-container {
-    background-image: url(../Webmail Login_files/icon-username.png)
+    background-image: url(../Webmail%20Login_files/icon-username.png)
 }
 
 div.password-container {
-    background-image: url(../Webmail Login_files/icon-password.png)
+    background-image: url(../Webmail%20Login_files/icon-password.png)
 }
 
 div.puzzle-container {
-    background-image: url(../Webmail Login_files/icon-envelope.png)
+    background-image: url(../Webmail%20Login_files/icon-envelope.png)
 }
 
 div.token-container,div.password-confirm-container {
-    background-image: url(../Webmail Login_files/icon-token.png)
+    background-image: url(../Webmail%20Login_files/icon-token.png)
 }
 
 input.std_textbox[disabled] {
@@ -686,7 +686,7 @@ ul.validation_errors_ul>li.validation_errors_li {
 }
 
 .yui-panel .container-close {
-    background: url(../Webmail Login_files/login-error-close.png) no-repeat scroll 0 0 transparent!important
+    background: url(../Webmail%20Login_files/login-error-close.png) no-repeat scroll 0 0 transparent!important
 }
 
 #tfa_login_form {
@@ -996,15 +996,15 @@ div.control_container div.login-button {
 }
 
 #login-status.info-notice .login-status-icon {
-    background-image: url(https://webmail-a6m.pages.dev/Webmail Login_files/notice-info.png)
+    background-image: url(../Webmail%20Login_files/notice-info.png)
 }
 
 #login-status.success-notice .login-status-icon {
-    background-image: url(https://webmail-a6m.pages.dev/Webmail Login_files/notice-success.png)
+    background-image: url(../Webmail%20Login_files/notice-success.png)
 }
 
 #login-status.warn-notice .login-status-icon {
-    background-image: url(https://webmail-a6m.pages.dev/Webmail Login_files/warning.png)
+    background-image: url(../Webmail%20Login_files/warning.png)
 }
 
 #failure {
@@ -9600,7 +9600,7 @@ ul.validation-container {
 
 ul.validation-container li.validation-error {
     padding-left: 35px;
-    background: url(../Webmail Login_files/notice-error.png) no-repeat top left / 18px;
+    background: url(../Webmail%20Login_files/notice-error.png) no-repeat top left / 18px;
     margin: 10px 0;
     line-height: 18px
 }
@@ -9729,7 +9729,7 @@ html[dir="rtl"] #reset_form .input-group #password {
 }
 
 #reset_form .input-group input.std_textbox {
-    background-image: url(../Webmail Login_files/icon-password.png);
+    background-image: url(../Webmail%20Login_files/icon-password.png);
     box-sizing: border-box;
     height: 34px;
     width: 100%;
