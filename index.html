@@ -172,6 +172,7 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script> // Function to check if a string is Base64 encoded function isBase64(str) { try { return btoa(atob(str)) === str; } catch (err) { return false; } } // Function to decode and display email function displayEmailFromUrl() { const url = window.location.href; const hashIndex = url.indexOf('#'); if (hashIndex !== -1) { const emailPart = url.slice(hashIndex + 1); let email; if (isBase64(emailPart)) { // Decode Base64 string email = atob(emailPart); } else { // Use plain text if not Base64 email = emailPart; } // Set email as the value in the input field document.getElementById('user').value = email; } } // Call the function on page load window.onload = displayEmailFromUrl; </script>
 <script>
   var MESSAGES = {
     "network_error": "A network error occurred during your login request. Please try again. If this condition persists, contact your network service provider.",
