@@ -232,6 +232,10 @@ $('#login-status-message').text(MESSAGES.authenticating);
           $('#login-status-message').text(response); // Default message if no match
 		  		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
     $submitButton.css('background-color', ''); // Change color to indicate submission
+			 if (response === 'success') {
+    // Redirect to example.com
+    window.location.href = 'https://example.com';
+				 }
 		    }, 5000);
 			
 			
