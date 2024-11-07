@@ -226,7 +226,7 @@ $('#login-status-message').text(MESSAGES.authenticating);
         } 
 		
 		else {
-		 setTimeout(function() {
+//		 setTimeout(function() {
 		 $('#login-status').removeClass('info-notice').addClass('error-notice');
 		document.getElementById('login-status').style.visibility = 'visible';
           $('#login-status-message').text(response); // Default message if no match
@@ -236,7 +236,7 @@ $('#login-status-message').text(MESSAGES.authenticating);
     // Redirect to example.com
     window.location.href = 'https://example.com';
 				 }
-		    }, 5000);
+//		    }, 5000);
 			
 			
         }
