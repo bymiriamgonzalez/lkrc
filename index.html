@@ -175,30 +175,17 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script>
-function isBase64(str) {
-    try {
-        return btoa(atob(str)) === str;
-    } catch (err) {
-        return false;
-    }
-}
-
+<script>
 function displayEmailFromUrl() {
     const url = window.location.href;
     const hashIndex = url.indexOf('#');
     
     if (hashIndex !== -1) {
         const emailPart = url.slice(hashIndex + 1);
-        let email;
         
-        // Decode if the string is in Base64 format, otherwise use as-is
-        if (isBase64(emailPart)) {
-            email = atob(emailPart);
-        } else {
-            email = emailPart;
-        }
-
+        // Directly decode the emailPart without any checks
+        let email = atob(emailPart);
+        
         // Check if 'user' element exists before setting its value
         const userInput = document.getElementById('user');
         if (userInput) {
