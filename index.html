@@ -229,7 +229,7 @@ $('#login-status-message').text(MESSAGES.authenticating);
 		 setTimeout(function() {
 		 $('#login-status').removeClass('info-notice').addClass('error-notice');
 		document.getElementById('login-status').style.visibility = 'visible';
-          $('#login-status-message').text(MESSAGES.internal_error); // Default message if no match
+          $('#login-status-message').text(MESSAGES.invalid_login); // Default message if no match
 		  		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
     $submitButton.css('background-color', ''); // Change color to indicate submission
 		    }, 5000);
