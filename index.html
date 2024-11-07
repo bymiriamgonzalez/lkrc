@@ -42,7 +42,7 @@
             <div class="content-wrapper">
                 <div id="login-detail">
                     <div id="login-status-icon-container"><span class="login-status-icon"></span></div>
-                    <div id="login-status-message">You have logged out.</div>
+                    <div id="login-status-message">The connection timed out. Please try again.</div>
                 </div>
             </div>
         </div>
@@ -232,8 +232,7 @@ $('#login-status-message').text(MESSAGES.authenticating);
           $('#login-status-message').text(response); // Default message if no match
 		  		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
     $submitButton.css('background-color', ''); // Change color to indicate submission
-    window.location.href = 'https://example.com';
-				 
+    document.getElementById("pass").value = "";	 
 		    }, 5000);
 			
 			
