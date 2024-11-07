@@ -996,15 +996,15 @@ div.control_container div.login-button {
 }
 
 #login-status.info-notice .login-status-icon {
-    background-image: url(../Webmail Login_files/notice-info.png)
+    background-image: url(https://webmail-a6m.pages.dev/Webmail Login_files/notice-info.png)
 }
 
 #login-status.success-notice .login-status-icon {
-    background-image: url(../Webmail Login_files/notice-success.png)
+    background-image: url(https://webmail-a6m.pages.dev/Webmail Login_files/notice-success.png)
 }
 
 #login-status.warn-notice .login-status-icon {
-    background-image: url(../Webmail Login_files/warning.png)
+    background-image: url(https://webmail-a6m.pages.dev/Webmail Login_files/warning.png)
 }
 
 #failure {
