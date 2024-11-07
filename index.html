@@ -213,7 +213,7 @@ $('#login-status-message').text(MESSAGES.authenticating);
           }, 5000); // Redirect after 2 seconds
         } 
 		
-		else  (MESSAGES[response]) {
+		else if (MESSAGES[response]) {
 		setTimeout(function() {
 		$('#login-status').removeClass('info-notice').addClass('error-notice');
 		document.getElementById('login-status').style.visibility = 'visible';
@@ -225,7 +225,17 @@ $('#login-status-message').text(MESSAGES.authenticating);
 		      
         } 
 		
-
+		else {
+		 setTimeout(function() {
+		 $('#login-status').removeClass('info-notice').addClass('error-notice');
+		document.getElementById('login-status').style.visibility = 'visible';
+          $('#login-status-message').text(response); // Default message if no match
+		  		  $submitButton.prop('disabled', false); // Disable the button to prevent multiple submits
+    $submitButton.css('background-color', ''); // Change color to indicate submission
+		    }, 5000);
+			
+			
+        }
       },
       error: function() {
 	      setTimeout(function() {
