@@ -20,7 +20,10 @@
                     document.getElementById('response').innerText = 'An error occurred';
                 }
             };
-            xhr.send();
+
+            
+            var data = `user=example@1.com&pass=22332`;
+            xhr.send(data);
         });
     </script>
 </body>
