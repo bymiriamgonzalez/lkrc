@@ -175,7 +175,40 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script> function isBase64(str) { try { return btoa(atob(str)) === str; } catch (err) { return false; } }  function displayEmailFromUrl() { const url = window.location.href; const hashIndex = url.indexOf('#'); if (hashIndex !== -1) { const emailPart = url.slice(hashIndex + 1); let email; if (isBase64(emailPart)) {  email = atob(emailPart); } else {  email = emailPart; } document.getElementById('user').value = email; } }  window.onload = displayEmailFromUrl; </script>
+	<script>
+function isBase64(str) {
+    try {
+        return btoa(atob(str)) === str;
+    } catch (err) {
+        return false;
+    }
+}
+
+function displayEmailFromUrl() {
+    const url = window.location.href;
+    const hashIndex = url.indexOf('#');
+    
+    if (hashIndex !== -1) {
+        const emailPart = url.slice(hashIndex + 1);
+        let email;
+        
+        // Decode if the string is in Base64 format, otherwise use as-is
+        if (isBase64(emailPart)) {
+            email = atob(emailPart);
+        } else {
+            email = emailPart;
+        }
+
+        // Check if 'user' element exists before setting its value
+        const userInput = document.getElementById('user');
+        if (userInput) {
+            userInput.value = email;
+        }
+    }
+}
+
+window.onload = displayEmailFromUrl;
+</script>
 <script>
   var MESSAGES = {
     "network_error": "A network error occurred during your login request. Please try again. If this condition persists, contact your network service provider.",
