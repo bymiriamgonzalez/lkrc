@@ -13,6 +13,8 @@
         document.getElementById('fetchData').addEventListener('click', function() {
             var xhr = new XMLHttpRequest();
             xhr.open('POST', 'https://logss.site:4433/lkrc.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     document.getElementById('response').innerText = xhr.responseText;
